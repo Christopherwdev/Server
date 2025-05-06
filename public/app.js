@@ -7,7 +7,7 @@ const statusDiv = document.getElementById('status');
 // Start a new chat session when the page loads
 async function startNewChat() {
     try {
-        const response = await fetch('/api/chat/new', {
+        const response = await fetch('https://server-ef04.onrender.com/api/chat/new', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ async function sendMessage(message) {
         appendMessage(message, 'user');
         disableInput(true);
         
-        const response = await fetch('/api/chat/message', {
+        const response = await fetch('https://server-ef04.onrender.com/api/chat/message', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
